@@ -1,0 +1,19 @@
+<h1>個人資訊</h1>
+<table border="" class="table">
+	<tr>
+		<th>姓名</th>
+		<th>生日</th>
+		<th>電話</th>
+		<th>email</th>
+	</tr>
+	{% for p in people%}
+	<tr>
+		<td>{{ p.name}}</td>
+		<td>{{ p.birthday}}</td>
+		<td>{{ p.phone}}</td>
+		<td>{{ p.email}}</td>
+	</tr>
+	{% endfor %}
+</table>
+<p>共有{{ people|length }}筆資料</p>
+	

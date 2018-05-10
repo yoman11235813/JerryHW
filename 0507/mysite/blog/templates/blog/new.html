@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New Post</title>
+</head>
+<body style="background-color:#E0FFFF">
+	<form action="" method="post">
+		{% csrf_token %}
+		<h4>標題: <input name="title">
+		<h4>內容:<h4> <textarea name="content"></textarea><br><br>
+		<input type="submit" value="送出"> 
+	</form>
+</body>
+</html>

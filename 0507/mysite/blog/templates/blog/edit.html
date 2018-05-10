@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Post</title>
+</head>
+<body style="background-color:#E0FFFF">
+	<form action="" method="post">
+		{% csrf_token %}
+		<h4>標題: <input name="title" value="{{ post.title }}">
+		<h4>內容:<h4> <textarea name="content">{{ post.content }}</textarea><br><br>
+		<input type="submit" value="編輯">
+	</form>
+</body>
+</html>

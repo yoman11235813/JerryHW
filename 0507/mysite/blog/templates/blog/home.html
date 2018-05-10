@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blog</title>
+</head>
+<style>
+	body {
+    color: white;
+    }
+
+	h3 {
+    color: #87CEEB;
+	}
+	a {
+    color: yellow;
+	}
+</style>
+<body style="background-image: url(https://2.bp.blogspot.com/_oalwC3a4OAg/TANDqFQsjbI/AAAAAAAABS8/kpBHJhXxceY/s1600/Blog_Background.jpg)">
+	<h1><div style="text-align:center">我的部落格</div></h1>
+	<h5 style="text-align:center">(下面有彩蛋^^)</h5>
+	<div align="right"><a href="/blog/new">新增文章</a></div><hr>
+	{% for post in post_list %}
+	<div style="border:2px 	#4682B4 solid;padding:15px;">
+		<h3>標題:</h3>{{ post.title }}
+		<h3>內容:</h3>{{ post.content }}
+		<div align="right">
+			<a href="/blog/edit?q={{ post.pk }}"> 編輯 </a> | <a href="/blog/delete?q={{ post.pk }}"> 刪除 </a>
+		</div>
+		</div><hr>
+	{% endfor %}
+	<div align="center"><img src="https://imgs.nmplus.hk/wp-content/uploads/2016/05/output_aSXnGK.gif" width="400" height="300" alt="There is nothing here"></div>
+	</body>
+</html>

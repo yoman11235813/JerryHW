@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mother's Day</title>
+</head>
+<body style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuRIJhPqoYkfpZeUW4jRdm8rsQP4yBbCqrz4DFES54mH-1DwPu)">
+	<h1>母親節留言板</h1>
+	<form action="" method="post">
+		{% csrf_token %}
+		<h4>作者: <input name="user">
+		<h4>內容: <textarea name="content"></textarea>
+		<input type="submit" value="留言">
+	</form><hr>
+	<h2>留言:</h2>
+	{% for m in message %}
+	<h3>{{ m.content }}</h3>
+	<h3>By: {{ m.user }}</h3>
+	{% endfor %}
+</body>
+<div align="middle"><img src="https://i4.hunantv.com/p1/20140918/1203152142C.jpg" width="1180" height="400" alt="There is nothing here"></div>
+</html>

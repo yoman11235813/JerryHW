@@ -1,0 +1,78 @@
+<html>
+   <head>
+      <title>0521</title>
+      <script>
+function input(x){
+      document.getElementById("display").value+=x;
+   }
+function e(){
+     document.getElementById("display").value=eval(document.getElementById("display").value)
+}
+function grade(){
+   var x = document.getElementById("d1").value
+   document.getElementById('d2').style.fontSize = '50px';
+   if (x >= 0 && x <= 100) {
+      if (x < 40) {
+        y = "你鄭翔?";
+        document.getElementById('d2').style.color = 'red';
+    } else if (x < 60) {
+        y = "你詹前駒?";
+        document.getElementById('d2').style.color = 'black';
+    } else if (x == 100) {
+        y = "阿不就好棒棒";
+        document.getElementById('d2').style.color = 'blue';
+    }else {
+        y = "我猜你及格了";
+        document.getElementById('d2').style.color = 'green';
+    } 
+ } else {
+        y = "你智障?";
+        document.getElementById('d2').style.color = 'purple';
+    }
+   
+     document.getElementById("d2").innerHTML = y;
+}
+</script>   
+   </head>
+   <body style="background: linear-gradient(to right, #ffccff,#ffcccc,#ffffcc,#ccffcc,#ccffff,#ccccff);" align="center">
+      <h1 style="color:#888888;">I am a calculator^^</h1>
+      <form name="calculator">
+         <table align="center">
+            <tr>
+               <td colspan="4">
+                  <input type="text" name="display" id="display">
+               </td>
+            </tr>
+            <tr>
+               <td><input type="button" value="1" onclick="input('1')"></td>
+               <td><input type="button" value="2" onclick="input('2')"></td>
+               <td><input type="button" value="3" onclick="input('3')"></td>
+               <td><input type="button" value="+" onclick="input('+')"></td>
+            </tr>
+            <tr>
+               <td><input type="button" value="4" onclick="input('4')"></td>
+               <td><input type="button" value="5" onclick="input('5')"></td>
+               <td><input type="button" value="6" onclick="input('6')"></td>
+               <td><input type="button" value="-" onclick="input('-')"></td>
+            </tr>
+            <tr>
+               <td><input type="button" value="7" onclick="input('7')"></td>
+               <td><input type="button" value="8" onclick="input('8')"></td>
+               <td><input type="button" value="9" onclick="input('9')"></td>
+               <td><input type="button" value="x" onclick="input('*')"></td>
+            </tr>
+            <tr>
+               <td><input type="reset" id="clear" value="c" ></td>
+               <td><input type="button" value="0" onclick="input('0')"></td>
+               <td><input type="button" value="=" onclick="e()"></td>
+               <td><input type="button" value="/" onclick="input('/')"></td>
+            </tr>
+         </table>
+      </form>
+      <h1 style="color:#888888;">Did you fail?</h1>
+      <input type="text" name="d1" id="d1">
+      <input type="button" value="GO" onclick="grade()">
+      <p id="d2"></p>
+      <img src="https://www.ttv.com.tw/drama13/shin/images/logo_slogan.png" width="460" height="255" alt="笑你">
+   </body>
+</html>
